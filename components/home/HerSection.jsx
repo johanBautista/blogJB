@@ -8,7 +8,7 @@ function HeroSection() {
       <dir className={classes.profileImg}>
         <Image src={profileImage} alt="Shaif arfan" height="200" width="200" />
       </dir>
-      <h1 className={classes.name}>jbp_DEV</h1>
+      <h1 className={classes.name}>db_DEV</h1>
       <p className={classes.description}>
         En busca de la Felicidad
       </p>

@@ -6,6 +6,7 @@ import { postFileNames, postsPath } from "../utils/mdxUtils";
 import HeroSection from "../components/home/HerSection";
 
 import styles from "../styles/Home.module.css";
+import BlogList from "../components/blogs/BlogList";
 
 
 export default function Home({ posts }) {
@@ -15,6 +16,7 @@ export default function Home({ posts }) {
       <main className={styles.main}>
         <HeroSection />
         <h1>ol</h1>
+        <BlogList posts={posts} />
       </main>
     </>
   );
