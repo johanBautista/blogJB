@@ -6,6 +6,10 @@
 }
 :root {
   --text-color: #a7aab0;
+  --text-white: #dbdde1;
+  --contrast:rgb(183, 91, 16);
+  --brown:rgb(237, 165, 70);
+  --verd:rgb(12, 157, 157);
   --bg-color: #0f141c;
 }
 
@@ -27,8 +31,11 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  color: royalblue;
+  /* text-decoration: underline; */
+  /* color: royalblue; */
+  color: rgb(237, 165, 70);
+  /* color: var(--contrast); */
+  /* color: var(--verd); */
 }
 svg {
   width: 100%;
@@ -42,8 +49,13 @@ pre {
 }
 
 code:not(pre) {
-  background: #2f405b;
+  background: #2f405b72;
   color: #d3d3d5;
-  padding: 0.3rem;
+  padding: .1rem 0.6rem;
   border-radius: 4px;
+}
+pre code.hljs{
+  background: #2f405b72;
+  margin: 1rem 0;
+  font-size: 13px;
 }

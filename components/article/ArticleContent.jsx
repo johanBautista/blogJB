@@ -9,7 +9,6 @@ const ArticleContent = ({ mdxSource }) => {
     <div className={classes.containerContent}>
       <h1>ArticleContent</h1>
       <MDXRemote {...mdxSource} lazy />
-      {/* <MDXProvider></MDXProvider> */}
 
     </div>
   );
