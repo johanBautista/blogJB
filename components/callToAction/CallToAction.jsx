@@ -1,5 +1,6 @@
 import Image from "next/image";
 import back from "../../images/back.webp";
+
 import classes from "./CallToAction.module.scss";
 
 const CallToAction = () => {

@@ -31,11 +31,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  /* text-decoration: underline; */
-  /* color: royalblue; */
   color: rgb(237, 165, 70);
-  /* color: var(--contrast); */
-  /* color: var(--verd); */
 }
 svg {
   width: 100%;

@@ -2,27 +2,29 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import * as matter from "gray-matter";
-import { postFileNames, postsPath } from "../../utils/mdxUtils";
+import { experienceFileNames, experiencesPath } from "../../utils/mdxUtils";
 
-import HeroSection from "../../components/home/HerSection";
 import BlogList from "../../components/utils/List";
+import HeroSection from "../../components/home/HerSection";
 
 import styles from "../../styles/Home.module.css";
 
-export default function ListBlogs({ posts }) {
+const ExperiencesPage = ({ experiences }) => {
   return (
     <>
       <main className={styles.main}>
         <HeroSection />
-        <BlogList posts={posts} crumbs="blogs" />
+        <BlogList posts={experiences} crumbs="experiences" />
       </main>
     </>
   );
-}
+};
+
+export default ExperiencesPage;
 
 export async function getStaticProps() {
-  const posts = postFileNames.map((slug) => {
-    const content = fs.readFileSync(path.join(postsPath, `${slug}`));
+  const experiences = experienceFileNames.map((slug) => {
+    const content = fs.readFileSync(path.join(experiencesPath, `${slug}`));
     const { data } = matter(content);
 
     return {
@@ -33,7 +35,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: JSON.parse(JSON.stringify(posts)),
+      experiences: JSON.parse(JSON.stringify(experiences)),
     },
   };
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import classes from "./Navbar.module.scss";
 
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
         Logo
       </Link>
       <input className={classes.menuBtn} type="checkbox" id="menuBtn" />
-      <label className={classes.menuIcon} for="menuBtn">
+      <label className={classes.menuIcon} htmlFor="menuBtn">
         <span className={classes.navicon}></span>
       </label>
       <ul className={classes.menu}>
@@ -16,7 +17,7 @@ const Navbar = () => {
           <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/experience">Experiences</Link>
+          <Link href="/experiences">Experiences</Link>
         </li>
         <li>
           <Link href="/blogs">Blog</Link>

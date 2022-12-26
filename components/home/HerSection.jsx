@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import profileImage from '../../images/johan_img.jpg';
+
 import classes from './HeroSection.module.scss';
 
 function HeroSection() {

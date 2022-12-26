@@ -1,8 +1,6 @@
 import { MDXRemote } from "next-mdx-remote";
-import React from "react";
-import classes from "./Article.module.scss";
 
-const components = {  }
+import classes from "./Utils.module.scss";
 
 const ArticleContent = ({ mdxSource }) => {
   return (

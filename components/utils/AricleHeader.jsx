@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
 import { format } from 'date-fns';
-import classes from './Article.module.scss'
+
+import classes from './Utils.module.scss';
 
 
 const AricleHeader = ({frontmatter}) => {
@@ -14,7 +14,7 @@ const AricleHeader = ({frontmatter}) => {
       </Head>
       <div>
         {frontmatter.bannerUrl && (
-          <div className={classes.bannerImg}>
+          <div className={classes.bannerImgArticle}>
             <Image
               src={frontmatter.bannerUrl}
               alt={frontmatter.title}

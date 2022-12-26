@@ -1,4 +1,5 @@
 import Navbar from "../navbar/Navbar";
+
 import classes from "./Layout.module.scss";
 
 const Layout = ({ children }) => {

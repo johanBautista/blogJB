@@ -1,21 +1,22 @@
+import React from "react";
 import path from "path";
 import fs from "fs";
 import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
-import { postFileNames, postsPath } from "../../utils/mdxUtils";
 import rehypeHighlight from "rehype-highlight";
+import { experienceFileNames, experiencesPath } from "../../utils/mdxUtils";
 
 import Article from "../../components/utils/Article";
 
-const BlogPage = ({MdxSource, frontmatter}) => {
-  return <Article mdxSource={MdxSource} frontmatter={frontmatter} />
+const ExperiencePage = ({ MdxSource, frontmatter }) => {
+  return <Article mdxSource={MdxSource} frontmatter={frontmatter} />;
 };
 
-export default BlogPage;
+export default ExperiencePage;
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const filePath = path.join(postsPath, `${slug}.mdx`);
+  const { experience } = params;
+  const filePath = path.join(experiencesPath, `${experience}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { content, data: frontmatter } = matter(fileContent);
   const MdxSource = await serialize(content, {
@@ -26,7 +27,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       params,
-      slug,
+      experience,
       MdxSource,
       frontmatter: JSON.parse(JSON.stringify(frontmatter)),
     },
@@ -34,17 +35,17 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const postsPaths = postFileNames.map((slug) => {
-    console.log('slug-posts', slug);
+  const experiencesPaths = experienceFileNames.map((experience) => {
+    console.log("experience-experiences", experience);
     return {
       params: {
-        slug: slug.replace(/\.mdx?$/, ""),
+        experience: experience.replace(/\.mdx?$/, ""),
       },
     };
   });
 
   return {
-    paths: postsPaths,
+    paths: experiencesPaths,
     fallback: false,
   };
 }

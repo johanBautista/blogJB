@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
-import classes from "./BlogList.module.scss";
-import profileImage from "../../images/johan_img.jpg";
 
-const BlogItemCard = ({ post }) => {
+import classes from "./Utils.module.scss";
+
+const ItemCard = ({ post, crumbs }) => {
   return (
     <div className={classes.item}>
       {post.frontmatter.bannerUrl && (
@@ -17,7 +17,7 @@ const BlogItemCard = ({ post }) => {
           />
         </div>
       )}
-      <Link className={classes.blogTitle} href={`/blogs/${post.slug}`}>
+      <Link className={classes.blogTitle} href={`/${crumbs}/${post.slug}`}>
         <p>{post.frontmatter.title}</p>
       </Link>
       {post.frontmatter.date && (
@@ -43,4 +43,4 @@ const BlogItemCard = ({ post }) => {
   );
 };
 
-export default BlogItemCard;
+export default ItemCard;
