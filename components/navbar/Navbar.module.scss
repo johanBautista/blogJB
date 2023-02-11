@@ -1,7 +1,7 @@
 /* header */
 
 .header {
-  background-color: var(--bg-color);
+  background-color: var(--color-background);
   box-shadow: 1px -5px 20px 5px rgba(234, 224, 224, 0.49);
   position: fixed;
   width: 100%;
@@ -13,19 +13,18 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: var(--bg-color);
+  background-color: var(--color-background);
 }
 
 .header li a {
   display: block;
   padding: 10px 20px;
-  // border-right: 1px solid var(--text-color);
   text-decoration: none;
 }
 
 .header li a:hover,
 .header .menuBtn:hover {
-  background-color: #1d2127;
+  background-color: var(--color-nav-hover);
 }
 
 .header .logo {
