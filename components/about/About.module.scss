@@ -2,7 +2,74 @@
     display: grid;
     justify-content: center;
 }
-
+.contain{
+    // background: #706fd3;
+    max-width: 800px;
+    margin: 4rem 0;
+}
+.subtitle{
+    margin: .5rem 0;
+}
 .parrafo{
-    max-width: 500px;
+    // max-width: 500px;
+}
+.urlLink{
+    font-weight: bold;
+    color: #706fd3;
+    // text-decoration: underline;
+    // font-style: oblique;
+}
+.containerStack{
+    width: 350px;
+    @media (min-width: 500px) {
+        width:450px
+    }
+    @media (min-width: 600px) {
+        width:550px
+    }
+    @media (min-width: 700px) {
+        width:650px
+    }
+    @media (min-width: 800px) {
+        width:750px
+    }
+
+}
+.stack{
+    display: block;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    word-wrap: break-word;
+}
+.stack>a{
+    margin: 5px 10px 5px 0;
+    display: inline-block;
+    font-size: .75rem;
+}
+.buttonStack {
+    padding: 5px 15px;
+    border-radius: 10px;
+    // background-color: rosybrown;
+    background-color: rgba(188, 143, 143, 0.384);
+    cursor: pointer;
+    font-weight: 900;
+    border: none;
+}
+  
+.buttonStack:hover {
+    background-color: rgba(188, 143, 143, 0.69);
+    color: var(--color-button-text);
+}
+.workExperience{
+    margin-top: 2rem;
+}
+.position{
+    color: grey;
+}
+.date{
+    font-size: 13px;
+}
+.listWorks{
+    margin: 0 2rem;
 }
