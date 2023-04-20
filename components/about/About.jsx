@@ -73,29 +73,20 @@ const About = () => {
       <div className={classes.contain}>
         <h2 className={classes.subtitle}>Hola,</h2>
         <p className={classes.parrafo}>
-          Mi nombre es Johan, soy un desarrollador frontend con 2 años de
-          experiencia, actualmente estoy trabajando en
-          <a
-            href="https://www.siriondev.com/ca"
-            target="_blank"
-            className={classes.urlLink}
-            rel="noreferrer"
-          >
+          Mi nombre es Johan, soy un desarrollador frontend con 2 años de experiencia, actualmente estoy trabajando en
+          <a href="https://www.siriondev.com/ca" target="_blank" className={classes.urlLink} rel="noreferrer">
             {" "}
             Sirion Developers
           </a>
-          . Soy un entusiasta del desarrollo web, aficionado en aprender nuevas
-          tecnologías y herramientas. Me apasiona diseñar y crear productos para
-          la web.
+          . Soy un entusiasta del desarrollo web, aficionado en aprender nuevas tecnologías y herramientas. Me apasiona
+          diseñar y crear productos para la web.
         </p>
         <br></br>
         <p className={classes.parrafo}>
-          Lo que más me gusta del desarrollo es la oportunidad de ofrecer
-          soluciones adaptadas a las necesidades del cliente, me gusta maquetar
-          diseños que sean atractivos y optimicen el performance de los
-          usuarios, en mis capacidades técnicas también cuento con experiencia
-          en guión, producción y postproducción de productos audiovisuales. Creo
-          en aprender y{" "}
+          Lo que más me gusta del desarrollo es la oportunidad de ofrecer soluciones adaptadas a las necesidades del
+          cliente, me gusta maquetar diseños que sean atractivos y optimicen el performance de los usuarios, entre mis
+          capacidades técnicas también cuento con experiencia en guión, producción y postproducción de productos
+          audiovisuales. Creo en aprender y{" "}
           <a
             href="https://www.youtube.com/watch?v=i07qz_6Mk7g"
             target="_blank"
@@ -124,30 +115,25 @@ const About = () => {
 
       <div className={classes.contain}>
         <h2 className={classes.subtitle}>Experiencia</h2>
-        <h4 className={`${classes.workExperience} ${classes.urlLink}`}>
-          Sirion Developers
-        </h4>
+        <h4 className={`${classes.workExperience} ${classes.urlLink}`}>Sirion Developers</h4>
         <p className={classes.position}>
           Front-end Developer Jr.
           <span className={classes.date}> (marzo de 2021 - Actualidad)</span>
         </p>
         <ul className={classes.listWorks}>
           <li>
-            Trabajé con el equipo en el diseño, desarrollo e implementación de
-            aplicaciones web para diferentes clientes de la empresa.
+            Trabajé con el equipo en el diseño, desarrollo e implementación de aplicaciones web para diferentes clientes
+            de la empresa.
           </li>
           <li>
-            Desarrollo de aplicación web según el mockup en adobe XD, login con
-            api redes sociales y diseño responsive .
+            Desarrollo de aplicación web según el mockup en adobe XD, login con api redes sociales y diseño responsive .
           </li>
           <li>
-            Software para la gestión de las cuentas bancarias y mensajería de
-            los usuarios, adaptación de una plantilla e integración con el api.
+            Software para la gestión de las cuentas bancarias y mensajería de los usuarios, adaptación de una plantilla
+            e integración con el api.
           </li>
-          <li>
-            Estimación de las issues, metodologías agile, integraciónes con el
-            api, detectar y solucionar bugs.
-          </li>
+          <li>Estimación de las issues, metodologías agile, integraciónes con el api, detectar y solucionar bugs.</li>
+          <li>Maquetación de componentes y desarrollo responsive para soporte mobile, tablet y desktop.</li>
           <li>Stack tecnológico: React, Vue, Next, Bootstrap, Mui</li>
         </ul>
       </div>
