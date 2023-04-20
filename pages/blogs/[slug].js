@@ -7,14 +7,15 @@ import rehypeHighlight from "rehype-highlight";
 
 import Article from "../../components/utils/Article";
 
-const BlogPage = ({MdxSource, frontmatter}) => {
-  return <Article mdxSource={MdxSource} frontmatter={frontmatter} />
+const BlogPage = ({ MdxSource, frontmatter }) => {
+  return <Article mdxSource={MdxSource} frontmatter={frontmatter} />;
 };
 
 export default BlogPage;
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
+  console.log("SLUG", slug);
   const filePath = path.join(postsPath, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { content, data: frontmatter } = matter(fileContent);
@@ -35,7 +36,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const postsPaths = postFileNames.map((slug) => {
-    console.log('slug-posts', slug);
+    console.log("slug-posts", slug);
     return {
       params: {
         slug: slug.replace(/\.mdx?$/, ""),

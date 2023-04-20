@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 import classes from './Utils.module.scss';
 
 
-const AricleHeader = ({frontmatter}) => {
+const ArticleHeader = ({frontmatter}) => {
   return (
     <>
       <Head>
@@ -50,4 +50,4 @@ const AricleHeader = ({frontmatter}) => {
   );
 };
 
-export default AricleHeader;
+export default ArticleHeader;
