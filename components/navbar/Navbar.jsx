@@ -25,9 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const initialColorValue = root.style.getPropertyValue(
-      "--initial-color-mode"
-    );
+    const initialColorValue = root.style.getPropertyValue("--initial-color-mode");
     // Set initial darkmode to light
     setDarkTheme(initialColorValue === "dark");
   }, []);
@@ -67,6 +65,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="/blogs">Blog</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </header>

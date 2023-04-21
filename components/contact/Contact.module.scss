@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  justify-content: center;
+}
+.contain {
+  max-width: 800px;
+  margin: 4rem 0;
+}
+.urlLink {
+  font-weight: bold;
+  color: #706fd3;
+}
+.networks {
+  display: flex;
+}
+.networkItem {
+  height: 90px;
+  color: rgba(188, 143, 143, 0.69);
+  padding: 20px;
+}
+.networkItem:hover {
+  color: var(--color-button-bg);
+}

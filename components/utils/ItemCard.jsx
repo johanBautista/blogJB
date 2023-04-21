@@ -26,12 +26,12 @@ const ItemCard = ({ post, crumbs }) => {
         </p>
       )}
       {post.frontmatter.tags && (
-        <p className={classes.tags}>
-          Tags:{" "}
+        <p className={classes.tag}>
+          Tagse:{" "}
           {post.frontmatter.tags.map((tag, index, tags) => (
-            <span key={tag}>
+            <span key={tag} className={classes.tags}>
               {tag}
-              {tags.length - 1 > index ? ", " : ""}
+              {/* {tags.length - 1 > index ? ", " : ""} */}
             </span>
           ))}
         </p>
