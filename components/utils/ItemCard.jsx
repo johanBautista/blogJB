@@ -5,41 +5,36 @@ import { format } from "date-fns";
 import classes from "./Utils.module.scss";
 
 const ItemCard = ({ post, crumbs }) => {
+  const { bannerUrl, title, date, info, tags, description } = post.frontmatter;
   return (
-    <div className={classes.item}>
-      {post.frontmatter.bannerUrl && (
+    <article className={classes.item}>
+      {bannerUrl && (
         <div className={classes.bannerImg}>
-          <Image
-            src={post.frontmatter.bannerUrl}
-            alt={post.frontmatter.title}
-            objectFit="cover"
-            layout="fill"
-          />
+          <Image src={bannerUrl} alt={title} objectFit="cover" layout="fill" />
         </div>
       )}
       <Link className={classes.blogTitle} href={`/${crumbs}/${post.slug}`}>
-        <p>{post.frontmatter.title}</p>
+        <p>{title}</p>
       </Link>
-      {post.frontmatter.date && (
-        <p className={classes.blogDate}>
-          {format(new Date(post.frontmatter.date), "PPP")}
-        </p>
+      {date && <p className={classes.blogDate}>{format(new Date(date), "PPP")}</p>}
+      {info ? <p className={classes.info}>{info}</p> : ""}
+      {tags && (
+        <div>
+          {
+            <>
+              {/* Tagse:{" "} */}
+              {tags.map((tag, index, tags) => (
+                <span key={tag} className={classes.tags}>
+                  {tag}
+                  {/* {tags.length - 1 > index ? ", " : ""} */}
+                </span>
+              ))}
+            </>
+          }
+        </div>
       )}
-      {post.frontmatter.tags && (
-        <p className={classes.tag}>
-          Tagse:{" "}
-          {post.frontmatter.tags.map((tag, index, tags) => (
-            <span key={tag} className={classes.tags}>
-              {tag}
-              {/* {tags.length - 1 > index ? ", " : ""} */}
-            </span>
-          ))}
-        </p>
-      )}
-      {post.frontmatter.description && (
-        <p className={classes.description}>{post.frontmatter.description}</p>
-      )}
-    </div>
+      {description && <p className={classes.description}>{description}</p>}
+    </article>
   );
 };
 

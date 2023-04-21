@@ -45,6 +45,14 @@
   color: var(--color-button-text);
 }
 
+.info {
+  position: relative;
+  top: -1.3rem;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  color: #706fd3;
+}
+
 .description {
   margin-top: 1rem;
 }
