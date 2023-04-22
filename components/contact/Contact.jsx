@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   return (
-    <main className={classes.container}>
+    <main>
       <h1>Contacto</h1>
       <div className={classes.contain}>
         <p>

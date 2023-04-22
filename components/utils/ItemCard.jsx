@@ -16,17 +16,15 @@ const ItemCard = ({ post, crumbs }) => {
       <Link className={classes.blogTitle} href={`/${crumbs}/${post.slug}`}>
         <p>{title}</p>
       </Link>
-      {date && <p className={classes.blogDate}>{format(new Date(date), "PPP")}</p>}
+      {date && <p className={classes.blogDateCard}>{format(new Date(date), "PPP")}</p>}
       {info ? <p className={classes.info}>{info}</p> : ""}
       {tags && (
         <div>
           {
             <>
-              {/* Tagse:{" "} */}
               {tags.map((tag, index, tags) => (
                 <span key={tag} className={classes.tags}>
                   {tag}
-                  {/* {tags.length - 1 > index ? ", " : ""} */}
                 </span>
               ))}
             </>

@@ -68,7 +68,7 @@ const About = () => {
     },
   ];
   return (
-    <main className={classes.container}>
+    <main>
       <h1>Acerca de mi</h1>
       <div className={classes.contain}>
         <h2 className={classes.subtitle}>Hola,</h2>
