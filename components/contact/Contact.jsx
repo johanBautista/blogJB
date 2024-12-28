@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Contact = () => {
   return (
     <main>
-      <h1>Contacto</h1>
+      <h2>Contacto</h2>
       <div className={classes.contain}>
         <p>
           Para consultas relacionadas con ofertas de empleo, por favor envieme un correo electrónico a

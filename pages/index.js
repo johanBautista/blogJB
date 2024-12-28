@@ -1,7 +1,7 @@
 import About from "../components/about/About";
 import CallToAction from "../components/callToAction/CallToAction";
 import Contact from "../components/contact/Contact";
-import HeroSection from "../components/home/HerSection";
+import HeroSection from "../components/home/HeroSection";
 import Technologies from "../components/technologies/Technologies";
 
 import styles from "../styles/Home.module.css";
