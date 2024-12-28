@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;1,100;1,200&family=Poiret+One&family=Quicksand:wght@300&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </Head>
       <body>
       <script

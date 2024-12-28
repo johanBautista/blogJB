@@ -4,7 +4,7 @@ import path from "path";
 import * as matter from "gray-matter";
 import { postFileNames, postsPath } from "../../utils/mdxUtils";
 
-import HeroSection from "../../components/home/HerSection";
+//import HeroSection from "../../components/home/HerSection";
 import BlogList from "../../components/utils/List";
 
 import styles from "../../styles/Home.module.css";
@@ -13,7 +13,7 @@ export default function ListBlogs({ posts }) {
   return (
     <>
       <main className={styles.main}>
-        <HeroSection />
+        {/* <HeroSection /> */}
         <BlogList posts={posts} crumbs="blogs" />
       </main>
     </>

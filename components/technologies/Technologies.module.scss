@@ -1,0 +1,46 @@
+.technologies {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.technologies__item {
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.technologies__icon {
+  font-size: 60px;
+  color: var(--color-paragraph);
+  transition: color 0.3s ease;
+}
+
+.technologies__text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--color-paragraph);
+  transition: color 0.3s ease;
+}
+
+.technologies__item:hover .technologies__icon,
+.technologies__item:hover .technologies__text {
+  color: cadetblue;
+}
+
+/* Mobile: 3 icons per row */
+@media (max-width: 767px) {
+  .technologies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet and Desktop: 5 icons per row */
+@media (min-width: 768px) {
+  .technologies {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .technologies__icon {
+    font-size: 80px;
+  }
+}

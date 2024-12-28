@@ -6,6 +6,7 @@ import classes from "./CallToAction.module.scss";
 const CallToAction = () => {
   return (
     <div className={classes.container}>
+      {/* <img className={classes.landingImage} src={back} alt="Picture of autor" /> 
       <Image
         className={classes.landingImage}
         src={back}
@@ -25,6 +26,7 @@ const CallToAction = () => {
             
         </div>
       </div>
+          */}
     </div>
   );
 };

@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import classes from "./Navbar.module.scss";
 
 const Navbar = () => {
-  const [darkTheme, setDarkTheme] = useState(null);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   const handleToggle = (event) => {
     setDarkTheme(event.target.checked);
   };
+
+  const data = [{ id: 1, name: "Experiences", path: "/experiences" }, { id: 2, name: "Blog", path: "/blogs" }]
 
   useEffect(() => {
     if (darkTheme !== undefined) {
@@ -57,7 +59,7 @@ const Navbar = () => {
       </label>
 
       <ul className={classes.menu}>
-        <li>
+        {/* <li>
           <Link href="/about">About</Link>
         </li>
         <li>
@@ -68,7 +70,10 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="/contact">Contact</Link>
-        </li>
+        </li> */}
+        {data.map((item) => (
+          <li key={item.id}>
+            <Link href={item.path}>{item.name}</Link></li>))}
       </ul>
     </header>
   );

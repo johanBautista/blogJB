@@ -1,6 +1,7 @@
 .contain {
   max-width: 800px;
   margin: 4rem 0;
+  background: salmon;
 }
 .urlLink {
   font-weight: bold;
@@ -8,12 +9,12 @@
 }
 .networks {
   display: flex;
+  margin: 1rem;
 }
 .networkItem {
-  height: 90px;
-  color: rgba(188, 143, 143, 0.69);
-  padding: 20px;
+  font-size:50px;
+  color: var(--color-button-bg);
 }
 .networkItem:hover {
-  color: var(--color-button-bg);
+  color: cadetblue;
 }

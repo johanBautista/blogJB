@@ -21,10 +21,11 @@ const Contact = () => {
             rel="noreferrer"
             className={classes.urlLink}
           >
-            <FontAwesomeIcon icon={faLinkedin} className={classes.networkItem} />
+            <i className={`${classes.networkItem} devicon-linkedin-plain`} />
           </a>
           <a href="https://github.com/johanBautista" target="_blank" rel="noreferrer" className={classes.urlLink}>
-            <FontAwesomeIcon icon={faGithub} className={classes.networkItem} />
+            <i className={`${classes.networkItem} devicon-github-plain`} />
+
           </a>
         </div>
       </div>

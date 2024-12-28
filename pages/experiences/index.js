@@ -5,7 +5,7 @@ import * as matter from "gray-matter";
 import { experienceFileNames, experiencesPath } from "../../utils/mdxUtils";
 
 import BlogList from "../../components/utils/List";
-import HeroSection from "../../components/home/HerSection";
+//import HeroSection from "../../components/home/HerSection";
 
 import styles from "../../styles/Home.module.css";
 
@@ -13,7 +13,7 @@ const ExperiencesPage = ({ experiences }) => {
   return (
     <>
       <main className={styles.main}>
-        <HeroSection />
+        {/**<HeroSection />*/}
         <BlogList posts={experiences} crumbs="experiences" />
       </main>
     </>
