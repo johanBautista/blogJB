@@ -1,6 +1,7 @@
 import About from "../components/about/About";
 import CallToAction from "../components/callToAction/CallToAction";
 import Contact from "../components/contact/Contact";
+import Experience from "../components/experience/Experience";
 import HeroSection from "../components/home/HeroSection";
 import Technologies from "../components/technologies/Technologies";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <CallToAction />
         <HeroSection />
         <About />
+        <Experience />
         <Technologies />
         <Contact />
       </main>

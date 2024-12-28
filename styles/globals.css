@@ -36,6 +36,7 @@
   --color-button-text: rgb(255, 255, 255);
   --color-background: #eceaea;
   --color-anchor: #e3870f;
+  --color-fix:#716fd3;
   --color-nav-hover: #e0dddd;
 }
 
@@ -142,11 +143,11 @@ pre code.hljs {
 }
 
 input:checked + .slider {
-  background-color: #0c9d22;
+  background-color: #8e8d8d56;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #0c9d22;
+  box-shadow: 0 0 1px #8e8d8d56;
 }
 
 input:checked + .slider:before {
