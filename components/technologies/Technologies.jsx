@@ -23,7 +23,7 @@ const Technologies = () => {
           <p className={classes.technologies__text}>Vue</p>
         </div>
         <div className={classes.technologies__item}>
-          <i class={`${classes.technologies__icon} devicon-nuxtjs-plain`}></i>
+          <i className={`${classes.technologies__icon} devicon-nuxtjs-plain`}></i>
           <p className={classes.technologies__text}>Nuxt</p>
         </div>
         <div className={classes.technologies__item}>
