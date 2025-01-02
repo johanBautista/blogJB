@@ -1,3 +1,4 @@
+/**
 .experience-section {
   margin: 2rem auto;
   max-width: 1200px;
@@ -49,14 +50,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-/**
-&--left {
-  grid-column: 1;
-  text-align: right;
-  align-items: flex-end;
-}
-*/
 
+    &--left {
+      grid-column: 1;
+      align-items: flex-end;
+      }
     &--right {
       grid-column: 3;
       text-align: left;
@@ -78,7 +76,7 @@
 
   &__content {
     padding: 1rem;
-    background-color: #f4f4f4;
+    border: 3px dashed #7777776e;
     border-radius: 5px;
     max-width: 250px;
   }
@@ -102,6 +100,8 @@
     margin-top: 0.5rem;
   }
 
+  
+
   @media (min-width: 768px) {
     &__timeline {
       display: grid;
@@ -114,16 +114,187 @@
         transform: translateX(-50%);
       }
     }
+/////////////
+&__item {
+  margin: 2rem 0;
+  align-items: center;
+  
+  &::before {
+    left: calc(50% - 2px); // Punto sobre la línea central
+  }
+}
+  //////////////
+  &__item {
+    margin: 2rem 0;
+    align-items: center;
+    
+    // Punto sobre la línea central
+    &::before {
+      left: calc(50% - 2px);
+    }
+    
+    &:nth-child(odd) &--left .experience-section__content__education {
+      background-color: #32cd32; // Fondo verde para impares en la izquierda
+    }
+    
+    &:nth-child(even) &--right .experience-section__content__experience {
+      background-color: #1e90ff; // Fondo azul para pares en la derecha
+    }
+  }
+}
+}
+*/
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 
-    &__item {
-      margin: 2rem 0;
-      align-items: center;
+  &__switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  
+  &__tab {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 
-      &::before {
-        left: calc(50% - 2px); // Punto sobre la línea central
-      }
+    &--active {
+      background-color: var(--color-fix);
+      color: white;
+    }
+  }
+  
+
+  &__timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2rem 1fr; // Dos columnas para los contenidos y una para la línea
+    gap: 2rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    // Línea vertical (roadmap)
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background-color: darkseagreen;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &--left {
+      grid-column: 1;
+      margin: 1rem 0 0 0;
+      text-align: left;
+    }
+
+    &--right {
+      grid-column: 3;
+      margin: 1rem 0 0 0;
+      text-align: left;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #695acd9b;
+      border-radius: 50%;
+    }
+
+    &--left::before {
+      right: -3.5rem; // Ajuste para el punto en la línea
+    }
+
+    &--right::before {
+      left: -3.5rem; // Ajuste para el punto en la línea
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__year {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #777;
     }
   }
 }
 
+.experience-section__timeline {
+  grid-template-columns: 1rem auto; // Columna para línea y contenido
+  gap: 1rem;
+  padding: 0;
+
+  &::before {
+    left: -0.1rem; // Línea al lado izquierdo
+    transform: translateX(0);
+  }
+
+  .experience-section__item {
+    &--left,
+    &--right {
+      grid-column: 2;
+    }
+
+    &::before {
+      left: -2.5rem;
+      right: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  /**
+  */
+  .experience-section{
+    &__item {
+      &--left {
+        margin: 1rem 0 0 0;
+        text-align: left;
+      }
+    
+      &--right {
+        margin: 1rem 0 0 0;
+      }
+    }
+  }
+  
+}
 

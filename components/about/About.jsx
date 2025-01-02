@@ -16,7 +16,7 @@ const About = () => {
       </div>
       <div className={classes.containerStack}>
         <p>
-          Puedes descargar mi currículum <a className={classes.urlLink}>aquí</a>
+          Puedes descargar mi cv <a className={classes.urlLink}>aquí</a>
         </p>
       </div>
     </main>
