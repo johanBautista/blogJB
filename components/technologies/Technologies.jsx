@@ -2,7 +2,7 @@ import classes from "./Technologies.module.scss";
 
 const Technologies = () => {
   return (
-    <div>
+    <div className={classes.container_technologies}>
       <h2 className={classes.subtitle}>Technologias 🎯</h2>
       <section className={classes.technologies}>
 

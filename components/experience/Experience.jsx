@@ -2,7 +2,7 @@ import classes from "./Experience.module.scss";
 import { useState } from 'react';
 
 const Experience = () => {
-  const [selectedTab, setSelectedTab] = useState('education');
+  const [selectedTab, setSelectedTab] = useState('experience');
 
   const educationData = [
     {
@@ -12,7 +12,7 @@ const Experience = () => {
       description: 'Grado interdisciplinar, competencias en diseño, programación y medios multimedia.',
     },
     {
-      name: 'Bootcamp Desarrollo web',
+      name: 'Bootcamp Web',
       academy: 'Ironhack',
       year: '2019',
       description: 'Formación intensiva para adquirir habilidades técnicas en desarrollo web.',
@@ -24,7 +24,7 @@ const Experience = () => {
       description: 'Especialización en tratamiento y producción de audio para medios audiovisuales.',
     },
     {
-      name: 'CFGS Audiovisual y espectáculos',
+      name: 'CFGS Audiovisuales',
       academy: 'IES Sta. Eulalia',
       year: '2010',
       description: 'Formación técnica en desarrollo y producción de contenidos audiovisuales.',
@@ -34,14 +34,14 @@ const Experience = () => {
   const experienceData = [
     {
       company: 'Indicator',
-      role: 'Front-end Developer',
+      role: 'Frontend',
       city: '',
-      date: 'Jun 2023 - Actualmente',
+      date: 'Jun 2023 - Dic 2024',
       summary: 'Creación de componentes para la construcción de páginas web por medio de un backoffice.',
     },
     {
       company: 'Sirion Developers',
-      role: 'Front-end Developer',
+      role: 'Frontend',
       city: '',
       date: 'Mar 2021 - Mar 2023',
       summary:
@@ -49,27 +49,27 @@ const Experience = () => {
     },
   ];
 
-  const data = selectedTab === 'education' ? educationData : experienceData;
+  const data = selectedTab === 'experience' ? experienceData : educationData;
 
   return (
-    <section>
+    <section className={classes.experience}>
       <h2 className={classes.subtitle}>Experiencia 🧗🏼‍♂️</h2>
 
       <div className={classes['experience-section']}>
         <div className={classes['experience-section__switch']}>
-          <button
-            className={`${classes['experience-section__tab']} ${selectedTab === 'education' ? classes['experience-section__tab--active'] : ''
-              }`}
-            onClick={() => setSelectedTab('education')}
-          >
-            Educación
-          </button>
           <button
             className={`${classes['experience-section__tab']} ${selectedTab === 'experience' ? classes['experience-section__tab--active'] : ''
               }`}
             onClick={() => setSelectedTab('experience')}
           >
             Experiencia
+          </button>
+          <button
+            className={`${classes['experience-section__tab']} ${selectedTab === 'education' ? classes['experience-section__tab--active'] : ''
+              }`}
+            onClick={() => setSelectedTab('education')}
+          >
+            Educación
           </button>
         </div>
 
@@ -85,15 +85,19 @@ const Experience = () => {
                 {selectedTab === 'education' ? (
                   <>
                     <h3 className={classes['experience-section__title']}>{item.name}</h3>
-                    <p className={classes['experience-section__subtitle']}>{item.academy}</p>
-                    <p className={classes['experience-section__year']}>{item.year}</p>
+                    <div className={classes['experience-section__subcontent']}>
+                      <p className={classes['experience-section__subtitle']}>{item.academy}</p>
+                      <p className={classes['experience-section__year']}>{item.year}</p>
+                    </div>
                     <p className={classes['experience-section__description']}>{item.description}</p>
                   </>
                 ) : (
                   <>
                     <h3 className={classes['experience-section__title']}>{item.company}</h3>
-                    <p className={classes['experience-section__subtitle']}>{item.role}</p>
-                    <p className={classes['experience-section__year']}>{item.date}</p>
+                    <div className={classes['experience-section__subcontent']}>
+                      <p className={classes['experience-section__subtitle']}>{item.role}</p>
+                      <p className={classes['experience-section__year']}>{item.date}</p>
+                    </div>
                     <p className={classes['experience-section__description']}>{item.summary}</p>
                   </>
                 )}

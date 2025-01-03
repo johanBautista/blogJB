@@ -12,7 +12,7 @@ function HeroSection() {
         </h1>
       </div>
       <div className={classes['hero-section__image']}>
-        <Image src={heroImage} alt="Johan Bautista" height="300" width="300" className={classes['hero-section__profile-img']} />
+        <Image src={heroImage} alt="Johan Bautista" height="300" width="300" className={classes['hero-section__profile-img']} priority />
       </div>
     </div>
   );

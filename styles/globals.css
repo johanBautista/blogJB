@@ -23,6 +23,9 @@
   --color-button-text: rgb(0, 0, 0);
   --color-background: #22212b;
   --color-anchor: #00ff4c;
+
+  rgba(188, 143, 143, 0.69)
+  rgba(188, 143, 143, 0.384)
 } */
 
 /* declaring the css variables colors */
@@ -48,7 +51,7 @@
   --color-paragraph: #b9b9b9b6;
   --color-button-bg: #b9b9b9b6;
   --color-button-text: #131313;
-  --color-background: #0f141c;
+  --color-background: #37474F;
   --color-anchor: #e3870f;
   --color-nav-hover: #1d2127;
 }

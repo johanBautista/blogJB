@@ -1,7 +1,12 @@
+.container_technologies{
+  margin: 4rem 0;
+}
+
 .technologies {
   display: grid;
   gap: 1rem;
   padding: 1rem;
+  margin: 3rem 0;
 }
 
 .technologies__item {
@@ -11,7 +16,7 @@
 
 .technologies__icon {
   font-size: 60px;
-  color: var(--color-paragraph);
+  color: rgba(128, 128, 128, 0.36);
   transition: color 0.3s ease;
 }
 

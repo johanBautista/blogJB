@@ -1,3 +1,6 @@
+.experience{
+  margin: 4rem 0;
+}
 .experience-section {
   display: flex;
   flex-direction: column;
@@ -20,11 +23,10 @@
     transition: background-color 0.3s;
 
     &--active {
-      background-color: var(--color-fix);
+      background-color: rgb(109, 144, 109);
       color: white;
     }
-  }
-  
+  } 
 
   &__timeline {
     position: relative;
@@ -54,10 +56,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    min-width: 240px;
+    max-width: 280px;
     padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px dashed rgba(128, 128, 128, 0.282);
+    border-radius: 4px;
 
     &--left,
     &--right {
@@ -72,7 +75,7 @@
       top: 1rem;
       width: 1rem;
       height: 1rem;
-      background-color: #695acd9b;
+      background-color: darkseagreen;
       border-radius: 50%;
     }
 
@@ -106,6 +109,27 @@
       color: #777;
     }
   }
+
+  // Card styles
+  .experience-section{ 
+    &__title{
+      font-size: 1rem;
+    }
+
+    &__subcontent {
+      background: rgba(143, 188, 143, 0.175);
+      display: flex;
+      justify-content: space-between;
+      font-size: .8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: .8rem;
+    }
+  }
+  
 }
 
 //Media queries
@@ -141,14 +165,8 @@
       }
   
       &::before {
-        content: '';
-        position: absolute;
         left: auto;
-        top: 1rem;
-        width: 1rem;
-        height: 1rem;
-        background-color: #695acd9b;
-        border-radius: 50%;
+        background-color: darkseagreen;
       }
 
       &--left::before {
@@ -160,6 +178,5 @@
       }
     }
   }
-  
 }
 
