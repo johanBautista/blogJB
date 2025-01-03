@@ -8,18 +8,18 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Johan_DEV</title>
+        <title>Johan Bautista DEV</title>
         <meta
           name="description"
           content="Protfolio personal Johan Bautista frontend developer, javascript, web"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon1.ico" />
       </Head>
       <Layout>
-      <div className="container">
-        <Component {...pageProps} />
-      </div>
+        <div className="container">
+          <Component {...pageProps} />
+        </div>
       </Layout>
     </>
   );
